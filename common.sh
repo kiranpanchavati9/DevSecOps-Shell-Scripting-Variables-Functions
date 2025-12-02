@@ -1,18 +1,24 @@
+#!/bin/bash
+# ==========================
+# Common Shell Script Library
+# ==========================
 
-# Common shell script
+# Color definitions
+RED="\e[31m"
+GREEN="\e[32m"
+YELLOW="\e[33m"
+BLUE="\e[34m"
+RESET="\e[0m"
 
 sample1(){
-  echo sample1 function
+  echo -e "${GREEN}Running sample1 function...${RESET}"
 }
 
-# Print my name 
-
 sample2(){
-  echo "My name is Kiran Panchavati"
+  echo -e "${BLUE}My name is ${YELLOW}Kiran Panchavati${RESET}"
 }
 
 sample3(){
   a=1234567890
-  echo "My contact number is $a" 
+  echo -e "${RED}My contact number is: ${GREEN}$a${RESET}"
 }
-
