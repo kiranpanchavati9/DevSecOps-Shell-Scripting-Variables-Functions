@@ -1,4 +1,4 @@
-# Declaring the function
+## Declaring the function
 sample(){
   echo Sample Function
 }
@@ -6,4 +6,14 @@ sample(){
 # Calling the function
 
 sample
+
+## Declaring the function
+
+sample2(){
+  echo Sample2 Function - Test
+}
+
+# Calling the function
+
+sample2
 
