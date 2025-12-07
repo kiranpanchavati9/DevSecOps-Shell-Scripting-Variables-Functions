@@ -1,29 +1,46 @@
-## Declaring the function
-sample(){
-  echo Sample Function
+#!/bin/bash
+#
+# File: functions.sh
+# Description: Demonstrates calling functions defined locally and from sourced script(s)
+
+###############################################
+# Local Function Definitions
+###############################################
+
+# Declaring sample() function
+sample() {
+  echo "Sample Function"
 }
-# Calling the function
+
+# Declaring sample2() function
+sample2() {
+  echo "Sample2 Function - Test"
+}
+
+###############################################
+# Calling Local Functions
+###############################################
 
 sample
-## Declaring the function
-
-sample2(){
-  echo Sample2 Function - Test
-}
-
-# Calling the function
 sample2
 
-## Code in main script.
-# Source common1.sh script. Meaning load the functions and variables inside that script to here.
+###############################################
+# Load External Script Functions and Variables
+###############################################
+# Sourcing common.sh and common1.sh to import functions
 
+source common.sh
 source common1.sh
-sample3
 
-# source function
+###############################################
+# Calling Functions from Sourced Scripts
+###############################################
 
+sample3   # Function from common.sh
+
+# Declare a global variable for sample4 to use
 a=10
-sample4
+sample4   # Function from common1.sh
+
+# Display updated variable b created in sample4
 echo "b - $b"
-
-
