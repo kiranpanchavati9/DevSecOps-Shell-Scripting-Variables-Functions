@@ -19,3 +19,11 @@ sample2
 
 source common1.sh
 sample3
+
+# source function
+
+a=10
+sample4
+echo "b - $b"
+
+
